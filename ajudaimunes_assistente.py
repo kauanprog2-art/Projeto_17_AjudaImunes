@@ -4,21 +4,25 @@
 import os
 
 # Importa a biblioteca Streamlit para criar a interface web interativa
-import streamlit as st 
+import streamlit as st
 
 # Importa a classe Groq para se conectar à API da plataforma Groq e acessar o LLM
 from groq import Groq
 
 # Configura a página do Streamlit com título, ícone, layout e estado inicial da sidebar
-st.set_page_config(page_title='Ajudante em Python', layout='wide',page_icon='🤖', initial_sidebar_state='expanded')
-
+st.set_page_config(
+    page_title="Ajuda Imunes AI Coder",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 # Define um prompt de sistema que descreve as regras e comportamento do assistente de IA
 CUSTOM_PROMPT = """
 Você é o "Ajuda Imunes AI Coder", um assistente de IA especialista em programação, com foco principal em Python. Sua missão é ajudar desenvolvedores iniciantes com dúvidas de programação de forma clara, precisa e útil.
 
 REGRAS DE OPERAÇÃO:
-1.  **Foco em Programação**: Responda apenas a perguntas relacionadas a programação, algoritmos, estruturas de dados, bibliotecas e frameworks. Se o usuário perguntar sobre outro assunto, responda educadwwwamente que seu foco é exclusivamente em auxiliar com código.
+1.  **Foco em Programação**: Responda apenas a perguntas relacionadas a programação, algoritmos, estruturas de dados, bibliotecas e frameworks. Se o usuário perguntar sobre outro assunto, responda educadamente que seu foco é exclusivamente em auxiliar com código.
 2.  **Estrutura da Resposta**: Sempre formate suas respostas da seguinte maneira:
     * **Explicação Clara**: Comece com uma explicação conceitual sobre o tópico perguntado. Seja direto e didático.
     * **Exemplo de Código**: Forneça um ou mais blocos de código em Python com a sintaxe correta. O código deve ser bem comentado para explicar as partes importantes.
@@ -31,7 +35,7 @@ REGRAS DE OPERAÇÃO:
 with st.sidebar:
     
     # Define o título da barra lateral
-    st.title("Ajudante em Python")
+    st.title("🤖 DSA AI Coder")
     
     # Mostra um texto explicativo sobre o assistente
     st.markdown("Um assistente de IA focado em programação Python para ajudar iniciantes.")
@@ -52,7 +56,7 @@ with st.sidebar:
 
   
 # Título principal do app
-st.title("Ajudante em Python AI Coder")
+st.title("Ajuda Imunes AI Coder")
 
 # Subtítulo adicional
 st.subheader("Assistente Pessoal de Programação Python 🐍")
@@ -140,11 +144,16 @@ if prompt := st.chat_input("Qual sua dúvida sobre Python?"):
                 st.error(f"Ocorreu um erro ao se comunicar com a API da Groq: {e}")
 
 st.markdown(
-            """
-            <div style="text-align: center; color: gray;">
-                <hr>
-                <p>Ajudante em Python AI Coder - Feito para ajudar os imunes ao conhecimento a pelo menos tentar obter um pouco mais de conhecimento</p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+    """
+    <div style="text-align: center; color: gray;">
+        <hr>
+        <p>Ajuda Imunes AI Coder - Feito para ajudar os imunes ao conhecimento a pelo menos tentar obter um pouco mais de conhecimento</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
+
